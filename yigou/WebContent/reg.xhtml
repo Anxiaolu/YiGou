@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:mcv="http://myfaces.apache.org/commons/validators">
+<h:head>
+	<title>用户注册</title>
+<script>
+	
+</script>
+</h:head>
+<h:body>
+<fieldset>
+		<h:form>
+			<h:panelGrid columns="3">
+		username：
+		<h:inputText value="#{user.name}" 
+					 required="true"
+					 requiredMessage="Without username!" 
+					 />
+				<h:message for="name" />
+				<br />
+
+				<lable>password：</lable>
+				<h:inputSecret value="#{user.password}" 
+							   required="true"
+							   requiredMessage="Without password!" 
+							   id="password" />
+					
+				<h:message for="password" />
+				<br />
+
+				<lable>reenter password：</lable>
+				<h:inputSecret id="repassowrd" value="#{user.repassword}"
+							   reuqired="true" 
+							   requiredMessage="Please enter agin your password!"
+							   converterMessage="Must match your first password!">
+					
+					<mcv:validateCompareTo operator="eq" forId="password"
+						message="The two password is different!" />
+				</h:inputSecret>
+				<h:message for="repassword" />
+				<br />
+
+				<lable>email-address：</lable>
+				<h:inputText value="#{user.email}" 
+							 required="true"
+							 requiredMessage="Please input your email!" />
+				<h:message for="email" />
+				<br />
+
+				<lable>sex：</lable>
+				<h:selectOneRadio value="#{user.gender}">
+       				 <f:selectItems value="#{genderOptions.gender}"/>
+      			</h:selectOneRadio>
+				<h:message value="gender" />
+				<br />
+			    		
+		birthday：
+		<h:inputText value="#{user.birthday}" required="true"
+					 requiredMessage="Please input your birthday!" 
+					converterMessage="Input as (MM/dd/yyyy)">
+					<f:convertDateTime pattern="MM/yyyy" />
+				</h:inputText>
+				<h:message for="birthday" />
+				<br />
+
+			</h:panelGrid>
+
+			<h:commandButton value="register" action="#{user.sendreport}" />&nbsp;&nbsp;	
+	</h:form>
+	</fieldset>
+</h:body>
+</html>

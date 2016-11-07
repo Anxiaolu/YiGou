@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<!--  When you make your own projects, copy and rename sample-file-with-form.xhtml
+      or sample-file-no-form.xhtml. Don't copy and rename THIS file, because
+      this file has too many extraneous things in it. -->
+<h:head>
+<title>易购</title>
+<link href="./css/styles.css" rel="stylesheet" type="text/css"/> 
+<link href="./images/logo.ico" rel="shortcut icon"/>
+<link href="./css/bootstrap.min.css" rel="stylesheet"/>
+<link href="./css/style.css" rel="stylesheet"/>
+</h:head>
+<h:body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class="navbar-brand" src="images/logo.png"/>
+        </div>
+<div class="col-lg-6">
+<div class="input-group">
+<input type="text" class="form-control" placeholder="搜索宝贝..."/>
+<span class="input-group-btn">
+<button class="btn btn-default" type="button">Go!</button>
+</span>
+</div><!-- /input-group -->
+</div><!-- /.col-lg-6 -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            	<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">所有商品分类<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#1" data-tab="tab-chrome">精品推荐</a></li>
+                        <li><a href="#2" data-tab="tab-firefox">新品上市</a></li>
+                        <li><a href="#3" data-tab="tab-safari">热卖商品</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#ad-carousel">首页</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal1">关于</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">最受欢迎<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">精品推荐</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">新品上市</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">热卖商品</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal2">用户管理</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="banner_box">
+<div class="main_box">
+<img src="images/banner_left.png" class="banner_left"/>
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/show1.jpg" alt="1 slide"/>
+
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/show2.jpg" alt="2 slide"/>
+
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/show3.jpg" alt="3 slide"/>
+
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<img src="images/banner_right.png" class="banner_right"/>
+</div>
+</div>
+
+
+<!--精品推荐栏目部分-->
+<div class="jingpin">
+	<div class="title_nav">
+		<h3 class="modle-title">精品推荐</h3>
+		<a name="1"></a>
+        <a class="more" href="#" target="_blank">more&raquo;</a>
+	</div>
+<div class="row">
+	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin01.png" alt="..."/>
+      		<div class="caption">
+        		<h3>精品大红袍01</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin02.png" alt="..."/>
+      		<div class="caption">
+        		<h3>精品大红袍02</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin03.png" alt="..."/>
+      		<div class="caption">
+        		<h3>精品大红袍03</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin04.png" alt="..."/>
+      		<div class="caption">
+        		<h3>精品大红袍04</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+</div>
+</div>
+
+
+
+<!--新品上市栏目-->
+<div class="xinpin">
+	<div class="title_nav">
+		<h3 class="modle-title">新品上市</h3>
+		<a name="2"></a>
+        <a class="more" href="#" target="_blank">more&raquo;</a>
+	</div>
+<div class="row">
+	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin01.png" alt="..."/>
+      		<div class="caption">
+        		<h3>新品大红袍01</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin02.png" alt="..."/>
+      		<div class="caption">
+        		<h3>新品大红袍02</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin03.png" alt="..."/>
+      		<div class="caption">
+        		<h3>新品大红袍03</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin04.png" alt="..."/>
+      		<div class="caption">
+        		<h3>新品大红袍04</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+</div>
+</div>
+
+
+
+<!--热卖商品栏目-->
+<div class="remai">
+	<div class="title_nav">
+		<h3 class="modle-title">热卖商品</h3>
+		<a name="3"></a>
+        <a class="more" href="#" target="_blank">more&raquo;</a>
+	</div>
+<div class="row">
+	<div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin01.png" alt="..."/>
+      		<div class="caption">
+        		<h3>热卖大红袍01</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin02.png" alt="..."/>
+      		<div class="caption">
+        		<h3>热卖大红袍02</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin03.png" alt="..."/>
+      		<div class="caption">
+        		<h3>热卖大红袍03</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+    <div class="col-sm-6 col-md-4">
+    	<div class="thumbnail">
+      		<img src="images/jingpin04.png" alt="..."/>
+      		<div class="caption">
+        		<h3>热卖大红袍04</h3>
+        		<p>送礼领导长辈顶级正山小种</p>
+        	<p><a href="#" class="btn btn-primary" role="button">订购</a></p>
+      		</div>
+    	</div>
+	</div>
+</div>
+</div>
+
+<div class="modal fade" id="about-modal2" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <!--第二个类是自己定义的样式，用于修改内部的用户连接-->
+                <div class="modal-body modle2">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+						<a class="btn btn-primary" href="reg.jsf">注册</a>
+                        <a class="btn btn-waring" href="log.jsf">登录</a>
+					</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">已完成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- 关于 -->
+    <div class="modal fade" id="about-modal1" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">关于</h4>
+                </div>
+                <div class="modal-body">
+                    <p style="color:#333;">&nbsp;&nbsp;中华茶道是饮茶之道和饮茶修道的统一，饮茶之道和饮茶修道，如车之两轮、鸟之双翼，相辅相成，缺一不可。饮茶修道，其结果在于悟道、证道、得道。悟道、证道、得道后的境界，表现为饮茶即道。饮茶即道是茶道的最高境界，茶人的终极追求。因此，中华茶道涵蕴饮茶之道、饮茶修道、饮茶即道三义。</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</h:body></html>
