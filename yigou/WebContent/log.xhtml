@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+<title>用户注册</title>
+<script type="text/javascript" src="js/Calendar3.js"></script>
+</h:head>
+<h:body>
+	<div id="container">
+		<div class="logo">
+			<a href="./index.xhtml"><img src="./images/logo.png" alt=""/></a>
+		</div>
+		<h1>用户登陆</h1>
+		<div class="box">
+		<h:form>
+			<div class="main">
+				<label>用户名：</label>
+				<h:inputText value="#{userlog.name}"/><br/>
+				<label>密码：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<h:inputSecret value="#{userlog.password}"/><br/>
+			</div>
+			<div class="space">
+				<h:commandButton value="登陆" action="#{userlog.logSucess}" style="cursor:pointer"/>
+			</div>
+		</h:form>
+		</div>
+	</div>
+  </h:body>
+</html>
